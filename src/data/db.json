@@ -1,0 +1,92 @@
+{
+    "products": [
+        {
+            "id":1,
+            "title":"Crazy Dog Mens T Shirt I Do It for The Hos Santa Claus Funny Christmas Party Tee.",
+            "price":"15.20$",
+            "description":"TIS THE SEASON: To bring a smile on everybody on your gift-giving list. Let us be your gift guide this holiday season for your secret Santa, holiday office parties, and white elephant gift exchanges. Look no further than our pun-themed, hilarious tees to get that impossible to buy for cousin, brother, or friend in your life.",
+            "imgUrl":"https://m.media-amazon.com/images/I/81NCwoDbN8L._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":2,
+            "title":"Funny Graphic Tee Capybara Selfie with UFOs Weird T-Shirt",
+            "description":"funny tshirt for hamster lover and black background",
+            "price":"15.20$",
+            "imgUrl":"https://m.media-amazon.com/images/I/71uzImbswLL._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":3,
+            "title":"Funny Fishing-Shirt Hooker On Weekends Bass Fish Dad T-Shirt.",
+            "price":"15.20$",
+            "description":"This tee is perfect for bass fishermen, walleye fishermen, fly fishermen and anyone who loves a good fishing fun! Get this fishing graphic tee for your next trip to the lake, river, or mountains.",
+            "imgUrl":"https://m.media-amazon.com/images/I/71hYvmVUXpL._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":4,
+            "title":"Funny Fishing-Shirt Mine's Big Use Two Hands Bass Fish Dad T-Shirt.",
+            "price":"15.20$",
+            "description":"Wear this awesome bass fishing patriotic American flag fishing pole while trying to catch a big bass, trout, or fish from the deep sea or lake. Add this to your fishing gear or make a great gift for your fishing husband or dad for",
+            "imgUrl":"https://m.media-amazon.com/images/I/71DSVhFTFKL._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":5,
+            "title":"Funny To Do List Your Mom Sarcasm Sarcastic Saying Men Women Short Sleeve T-Shirt.",
+            "price":"15.20$",
+            "description":"Looking for a nice to wear while on a party? Whether you're have an irony, humour, wit, ridicule, bluntness, wittiness, this type can give more courage doing all you're activity! For everyone that is into hyperbole.",
+            "imgUrl":"https://m.media-amazon.com/images/I/615H4yVgtUL._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":6,
+            "title":"Funny My Mom Says I'm Special T-Shirt for Sons and Daughters T-Shirt",
+            "price":"15.20$",
+            "description":"funny shirt for mon with funny quote",
+            "imgUrl":"https://m.media-amazon.com/images/I/6176X1DR8GL._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":7,
+            "title":"Funny In my defense i was left unsupervised Short Sleeve T-Shirt.",
+            "price":"15.20$",
+            "description":"Funny Gift Idea for Any Occasion and Celebration, Birthday, Sports, Gym, Father's Day, Sarcastic Humorous Christmas Present Tee",
+            "imgUrl":"https://m.media-amazon.com/images/I/61-W4juB0NL._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":8,
+            "title":"Crazy Dog Mens T Shirt I Can't Work Today My Arm is in A Cast Funny Fishing Fathers Day Tee.",
+            "price":"15.20$",
+            "description":"Dad jokes? Check. Epic dad bods? Check. Hilarious t-shirts for Father's Day? Double check! Get ready to make your dad laugh till he can't stop with our side-splitting collection of Father's Day t-shirts.",
+            "imgUrl":"https://m.media-amazon.com/images/I/61-7RXB2++L._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":9,
+            "title":"I'm Not Old I'm Classic Funny Car Graphic - Mens & Womens Short Sleeve T-Shirt.",
+            "price":"15.20$",
+            "description":"With over 700 reviews, our customers really enjoyed this product! Take a look for yourself. Friends & family will love this funny mens birthday slogan tee with a quote.",
+            "imgUrl":"https://m.media-amazon.com/images/I/61PnYlR6HEL._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":10,
+            "title":"Crazy Dog Mens Funny Christmas Shirts Jolliest Bunch of A-Holes Tees for Guys.",
+            "price":"15.20$",
+            "description":"Here at Crazy Dog T-Shirts, the holidays are our favorite time of year. Whether you're looking for a gift for a loved one or shopping for yourself.",
+            "imgUrl":"https://m.media-amazon.com/images/I/61LOCimYvjL._AC_UL320_.jpg",
+            "type":"shirt"
+        },
+        {
+            "id":11,
+            "title":"Crazy Dog Mens Funny Christmas Shirts Jolliest Bunch of A-Holes Tees for Guys.",
+            "price":"8.20$",
+            "description":"Here at Crazy Dog T-Shirts, the holidays are our favorite time of year. Whether you're looking for a gift for a loved one or shopping for yourself.",
+            "imgUrl":"https://m.media-amazon.com/images/I/81MtKRJ1HLL._AC_UY218_.jpg",
+            "type":"book"
+        }
+    ]
+  }

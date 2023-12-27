@@ -1,0 +1,64 @@
+
+.form-login input{
+    display: block;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-bottom: 7px;
+    width: 100%;
+}
+.form-login main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-login form{
+    padding: 30px 60px;
+    border-radius: 7px;
+    box-shadow: rgb(40, 50, 70) 0px 20px 30px -10px;
+}
+.form-login form h4{
+    font-weight: bolder;
+}
+.form-login form span{
+    color: #0D1F95;
+    text-align: center;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.form-login .btn-submit{
+    margin-top: 16px;
+    display: block;  
+    width: 100%;
+    background-color: #FFD814;
+    border: 0;
+}
+.form-login .btn-submit:hover{
+    background-color: black;
+    color: white;
+}
+.form-login label{
+    margin: 5px;
+}
+.form-login .pswError{
+    border:1px solid red;
+}
+.form-login .pswError::after{
+    content: 'email not valide';
+    top: 5px;
+    color: white;
+
+}
+.form-login .pswcor{
+    border: 1px solid green;
+}
+.form-login .red{
+    color: red;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+.form-login .green{
+    color: green;
+    display: block;
+}
