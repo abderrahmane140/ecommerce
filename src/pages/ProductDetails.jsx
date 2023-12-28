@@ -31,7 +31,8 @@ export default function ProductDetails() {
                 <p className="parag-desc">About this item</p>
                 <p>{description}</p>
                 <span>{price}</span>
-                <button onClick={()=>AddToCard(id)}>Add to card</button>
+                <button style={{display:'block'}} onClick={()=>AddToCard(id)}>Add to card</button>
+                <button className="mt-3">Buy Now</button>
             </div>
             </div>            
             </div>

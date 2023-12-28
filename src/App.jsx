@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import ProductDetails from './pages/ProductDetails'
 import Login from './pages/Login'
 import AddCard from './pages/AddCard'
+import PageNotFound from './pages/PageNotFound'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path='/contact' element={<Contact />}/>
               <Route path='/addCard' element={<AddCard />}/>
               <Route path='/login' element={<Login />}/>
+              <Route path='*' element={<PageNotFound />}/>
             </Route>
 
         </Routes>
