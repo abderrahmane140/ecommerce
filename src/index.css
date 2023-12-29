@@ -157,10 +157,9 @@ a {
   
   .Contact .btn {
     padding: 0.6rem 1.3rem;
-    background-color: #fff;
-    border: 2px solid #fafafa;
+    background-color: #FFD814;
     font-size: 0.95rem;
-    color: #3f4443;
+    color: black;
     line-height: 1;
     border-radius: 25px;
     outline: none;

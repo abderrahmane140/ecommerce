@@ -197,7 +197,7 @@ export default function Contact(){
             </div>
             {displayError('AcceptAllCondition')}
             </div>
-            <button disabled={!isFormsValid} type="submit" className="btn btn-primary w-100 mb-4">Submit</button>
+            <button disabled={!isFormsValid} type="submit" className="btn w-100 mb-4">Submit</button>
           </form>
         </div>
       </div>
