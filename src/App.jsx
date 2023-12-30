@@ -8,6 +8,8 @@ import ProductDetails from './pages/ProductDetails'
 import Login from './pages/Login'
 import AddCard from './pages/AddCard'
 import PageNotFound from './pages/PageNotFound'
+import BuyNow from './pages/BuyNow'
+
 
 function App() {
   return (
@@ -21,9 +23,9 @@ function App() {
               <Route path='/contact' element={<Contact />}/>
               <Route path='/addCard' element={<AddCard />}/>
               <Route path='/login' element={<Login />}/>
+              <Route path='/buynow' element={<BuyNow />}/>
               <Route path='*' element={<PageNotFound />}/>
             </Route>
-
         </Routes>
          </BrowserRouter>
     </>

@@ -23,11 +23,11 @@ export default function CardsProvider({ children }) {
             setCart(prev => [...prev, newItem]);
         }
     };
-
-    console.log(cart);
-
+    const handledelete=(id)=>{
+        setCart(cart.filter((item) => item.id !== id))
+    }
     return (
-        <CartContext.Provider value={{ AddToCard, cart }}>
+        <CartContext.Provider value={{ AddToCard, cart,handledelete }}>
             {children}
         </CartContext.Provider>
     );
