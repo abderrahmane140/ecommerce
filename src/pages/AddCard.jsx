@@ -14,7 +14,7 @@ export default function AddCard() {
                 <div className="card mb-3" key={item.id} style={{height: "160px"}}>
                 <div className=" ha row g-0">
                     <div className="col-md-3 mt-3">
-                    <img src={item.imgUrl} style={{width: "90px"}} className="img-fluid rounded-start" alt="..."/>
+                    <img src={item.imgUrl} style={{width: "120px"}} className="img-fluid rounded-start" alt="..."/>
                     </div>
                     <div className="col-md-3 mt-3">
                     <div className="card-body">

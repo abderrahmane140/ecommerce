@@ -8,6 +8,11 @@
 .card-img{
   margin: 40px;
 }
+.card .crd{
+  width: 200px;
+  height: 200px;
+}
+
 .container{
   width: 1100px;
   max-width: 100%;

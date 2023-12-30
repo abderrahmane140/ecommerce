@@ -150,7 +150,7 @@ export default
             title:"Conscious Wealth: Money, Investing, and a Financial Awakening for the Person Who Has It All.",
             price:"8.20$",
             description:"An Intentional and Mindful Approach to Wealth For many highne-worth individuals achieving substantial wealth can bring unexpected obstacles. While unlimited financial means can provide comfort and lifestyle, this level of wealth can also result in a life that feels empty and estranged.",
-            imgUrl:"../../src/assets/img/book11.jpg",
+            imgUrl:"../../src/assets/img/book09.jpg",
             type:"book"
         },
         {
