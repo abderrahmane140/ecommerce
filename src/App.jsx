@@ -9,25 +9,13 @@ import Login from './pages/Login'
 import AddCard from './pages/AddCard'
 import PageNotFound from './pages/PageNotFound'
 import BuyNow from './pages/BuyNow'
+import Routage from './pages/Routage'
 
 
 function App() {
   return (
     <>
-    <BrowserRouter>
-        <Routes>
-            <Route path='/' element={<Layout />}>
-              <Route index element={<Product />}/>
-              <Route path='/productDetails/:id' element={<ProductDetails />}/>
-              <Route path='/about' element={<About/>}/>
-              <Route path='/contact' element={<Contact />}/>
-              <Route path='/addCard' element={<AddCard />}/>
-              <Route path='/login' element={<Login />}/>
-              <Route path='/buynow' element={<BuyNow />}/>
-              <Route path='*' element={<PageNotFound />}/>
-            </Route>
-        </Routes>
-         </BrowserRouter>
+    <Routage />
     </>
   )
 }

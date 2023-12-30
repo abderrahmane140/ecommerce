@@ -81,18 +81,6 @@ header .counter{
 main {
   margin-bottom: 42px;
 }
-
-footer {
-  background-color: #161616;
-  color: #AAAAAA;
-  height: 74px;
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0;
-  font-weight: 500;
-}
 .red{
   color: #EC8B5E;
   padding: 120px;
