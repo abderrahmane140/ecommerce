@@ -88,7 +88,17 @@ export default function Login() {
     return (
         <div className="form-login">
             <main >
-            {login ? <h1 className='green'>login succes</h1> :
+            {login ?
+            <div className="jumbotron jumbotron-fluid">
+            <div className="container">
+            <h1 className="display-3">Your Login Success</h1>
+            <p className="lead">Thank you for your Login</p>
+            <hr className="my-2" />
+            <p className="lead">
+            <a className="btn btn-primary btn-lg" href="." role="button">Return to Home Page</a>
+            </p>
+            </div>
+        </div> :
             <form  >
                 {display ?
                 <>
