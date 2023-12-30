@@ -59,7 +59,7 @@ function Product() {
                 <Link to={`/productDetails/${item.id}`}>
                 <div className={`card`} style={{width: "18rem"}}  >
                     <div className="card-img">
-                    <img src={item.imgUrl} className={`crd-${item.type}`} height="170px" width="180px"/>
+                    <img src={item.imgUrl} className={`crd`} height="170px" width="180px"/>
                     </div>
                 <div className="card-body">
                     <h5 className="card-title">{item.title.slice(0,60)+'...'}</h5>
