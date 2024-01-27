@@ -15,16 +15,46 @@ function Product() {
 
     //     fetchData();
     // }, []);
-    if(value){
-        result = data && data.filter(item=>
-            item.title.toUpperCase().includes(value.toUpperCase()))
-    }else if(catgFilter){
+
+
+    // if(catgFilter){
+    //     result =data && data.filter(item=>
+    //         item.type === catgFilter)
+    // }else if(value){
+    //     let resultl = result ? result.filter(item=>
+    //         item.title.toUpperCase().includes(value.toUpperCase())):data.filter(item=>
+    //             item.title.toUpperCase().includes(value.toUpperCase()))
+    // }else{
+    //     result= data
+    // }
+    if(catgFilter){
         result =data && data.filter(item=>
             item.type === catgFilter)
+            if(value){
+                result = result.filter(item=>
+                    item.title.toUpperCase().includes(value.toUpperCase()))
+            }
+    }else if(value){
+        result = data && data.filter(item=>
+            item.title.toUpperCase().includes(value.toUpperCase()))
+            if(catgFilter){
+                result =result.filter(item=>
+                    item.type === catgFilter)
+            }
     }else{
         result= data
     }
-
+    ///////////////////////////////
+    // if(value){
+    //     result = data && data.filter(item=>
+    //         item.title.toUpperCase().includes(value.toUpperCase()))
+    // }else if(catgFilter){
+    //     result =data && data.filter(item=>
+    //         item.type === catgFilter)
+    // }else{
+    //     result= data
+    // }
+    /////////////////////
     // let result = value && catgFilter ? data && data.filter(item=>
     //     item.title.toUpperCase().includes(value.toUpperCase()) || item.type === catgFilter
     // ):data

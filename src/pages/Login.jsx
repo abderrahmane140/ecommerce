@@ -1,5 +1,6 @@
 import {  useState } from "react"
 import './form.css'
+import { Navigate, redirect, useNavigate } from "react-router-dom"
 export default function Login() {
     const [usernam,setUsernam]=useState('')
     const [pws,setPws]=useState('')
@@ -9,6 +10,9 @@ export default function Login() {
     const [login,setLogin]=useState(false)
     const [feild,setFeild]=useState(false)
     let isvalide=true
+
+    const navigate = useNavigate()
+
     const [error,setError]=useState({
         email:false,
         password:false,
@@ -62,13 +66,14 @@ export default function Login() {
         e.preventDefault()
         for(let i=0;i<dataArray.length;i++){
             let data= dataArray[i]
-            if(data.usernam === usernam && data.psw){
-                setLogin(true)
+            if(data.usernam === usernam && data.psw === pws){
+                navigate('/');
             }else{
                 setFeild(true)
             }
         }
     }
+
     const handleSubmit=(e)=>{
         if(!validationEmail()){
             e.preventDefault()
@@ -88,17 +93,6 @@ export default function Login() {
     return (
         <div className="form-login">
             <main >
-            {login ?
-            <div className="jumbotron jumbotron-fluid">
-            <div className="container">
-            <h1 className="display-3">Your Login Success</h1>
-            <p className="lead">Thank you for your Login</p>
-            <hr className="my-2" />
-            <p className="lead">
-            <a className="btn btn-primary btn-lg" href="." role="button">Return to Home Page</a>
-            </p>
-            </div>
-        </div> :
             <form  >
                 {display ?
                 <>
@@ -129,11 +123,10 @@ export default function Login() {
                     <input type="password" value={formData.password} name="password" onChange={handleInputChange}/>
                     {error.password && <p className="red">password not valide</p>}
                     <input type="submit"value="Sign Up" className="btn-submit" onClick={handleSubmit}/>
-                    <span  onClick={handleClicks}>I have already acount</span>
+                    <span onClick={handleClicks}>I have already acount</span>
                 </>
             }
             </form>
-        }
         </main>
         </div>
 )

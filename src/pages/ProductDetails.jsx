@@ -38,7 +38,8 @@ export default function ProductDetails() {
                     AddToCard(newDAta.id)
                     setDone(true)
                 }
-                    }>{done?'Done':'Add To Card'}</button>
+                
+                    } disabled={done}>{done?'Done':'Add To Card'}</button>
                 <button className="mt-3 buy-button"><Link to='/buynow'>Buy Now</Link></button>
                 
             </div>
