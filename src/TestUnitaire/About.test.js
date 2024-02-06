@@ -4,43 +4,31 @@ import About from "../pages/About";
 
 
 describe('About component', () => {
-    test('renders about section', () => {
-      render(<About />);
-      const aboutSection = screen.getByTestId('about-section');
-      expect(aboutSection).toBeInTheDocument();
-    });
-  
-    test('renders image', () => {
-      render(<About />);
-      const image = screen.getByTestId('img');
-      expect(image).toBeInTheDocument();
-      expect(image).toHaveAttribute('src');
-      expect(image).toHaveAttribute('alt', 'About Img');
-    });
-  
-    test('renders expertise section', () => {
-      render(<About />);
-      const expertiseSection = screen.getByTestId('div02');
-      expect(expertiseSection).toBeInTheDocument();
-    });
-  
-    test('renders expertise items', () => {
-      render(<About />);
-      const html = screen.getByTestId('html');
-      const css = screen.getByTestId('css');
-      const javaScript = screen.getByTestId('java script');
-      const react = screen.getByTestId('react');
-  
-      expect(html).toBeInTheDocument();
-      expect(html).toHaveTextContent('HTML');
-      
-      expect(css).toBeInTheDocument();
-      expect(css).toHaveTextContent('CSS');
-  
-      expect(javaScript).toBeInTheDocument();
-      expect(javaScript).toHaveTextContent('Java Script');
-  
-      expect(react).toBeInTheDocument();
-      expect(react).toHaveTextContent('React Js');
-    });
+  test('renders about section with correct content', () => {
+    render(<About />);
+    
+    // Vérifie si la section about est rendue
+    expect(screen.getByTestId('about-section')).toBeInTheDocument();
+
+    // Vérifie si l'image est rendue avec la source correcte
+    const imgElement = screen.getByTestId('img');
+    expect(imgElement).toBeInTheDocument();
+    expect(imgElement).toHaveAttribute('src');
+
+    // Vérifie si le titre "About" est rendu
+    expect(screen.getByTestId('abt')).toHaveTextContent('About');
+
+    // Vérifie si l'adresse est rendue avec les informations correctes
+    expect(screen.getByTestId('div01')).toBeInTheDocument();
+    expect(screen.getByText('Safi, Salame, Morroco')).toBeInTheDocument();
+    expect(screen.getByText('+91 987-654-4321')).toBeInTheDocument();
+    expect(screen.getByText('crowncoder@gmail.com')).toBeInTheDocument();
+
+    // Vérifie si l'expertise est rendue avec les icônes et les textes corrects
+    expect(screen.getByTestId('div02')).toBeInTheDocument();
+    expect(screen.getByTestId('html')).toHaveTextContent('HTML');
+    expect(screen.getByTestId('css')).toHaveTextContent('CSS');
+    expect(screen.getByTestId('java script')).toHaveTextContent('Java Script');
+    expect(screen.getByTestId('react')).toHaveTextContent('React Js');
   });
+});

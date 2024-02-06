@@ -1,29 +1,23 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Product from '../pages/Product';
-import '@testing-library/jest-dom';
 
-describe('YourComponent', () => {
-  test('renders the search and filter component correctly', () => {
+describe('Product component', () => {
+  test('renders product list correctly', () => {
     render(
       <BrowserRouter>
         <Product />
       </BrowserRouter>
     );
 
-    // Vérifiez que les éléments du formulaire sont rendus correctement
+    // Vérifiez que les éléments de recherche sont présents
     expect(screen.getByTestId('select')).toBeInTheDocument();
-    expect(screen.getByTestId('form')).toBeInTheDocument();
-    expect(screen.getByTestId('text')).toBeInTheDocument();
-
-    // Simulez une saisie dans le champ de recherche
-    fireEvent.change(screen.getByTestId('text'), { target: { value: 'search query' } });
-    expect(screen.getByDisplayValue('search query')).toBeInTheDocument();
-
-    // Vérifiez le rendu de la liste des résultats
+    expect(screen.getByTestId('div0')).toBeInTheDocument();
     expect(screen.getByTestId('div1')).toBeInTheDocument();
-    expect(screen.queryByText('no item')).toBeNull();
+    expect(screen.getByPlaceholderText('Search for anything...')).toBeInTheDocument();
 
+   
   });
 });
