@@ -25,7 +25,7 @@ export default function AddCard() {
                     <div className="col-md-3 mt-5 connt">
                         <p className="number">{item.counte}</p>
                     </div>
-                    <div className="col-md-3 trash">
+                    <div className="col-md-3 trash-q">
                     <span onClick={()=>handleDelete(item.id)}><i className="fa-solid fa-trash"></i></span>
                     </div>
                         

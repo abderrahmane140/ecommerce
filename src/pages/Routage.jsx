@@ -6,7 +6,7 @@ import About from './About'
 import Contact from './Contact'
 import AddCard from './AddCard'
 import Login from './Login'
-import BuyNow from './BuyNow'
+import Buy from './Buy'
 import PageNotFound from './PageNotFound'
 
 
@@ -23,7 +23,7 @@ export default function Routage(){
                 <Route path='/contact' element={<Contact />}/>
                 <Route path='/addCard' element={<AddCard />}/>
                 <Route path='/login' element={<Login />}/>
-                <Route path='/buynow' element={<BuyNow />}/>
+                <Route path='/buy/:id' element={<Buy />}/>
                 <Route path='*' element={<PageNotFound />}/>
               </Route>
            </Routes>
