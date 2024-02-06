@@ -1,16 +1,22 @@
-import {  useState } from "react"
+import {  useContext, useState } from "react"
 import './form.css'
-import { Navigate, redirect, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import { LoginContext } from "../context/loginContext"
 export default function Login() {
     const [usernam,setUsernam]=useState('')
     const [pws,setPws]=useState('')
     const [display,setDisplay]=useState(true)
     const [style,setStyle]=useState(false)
     const [dataArray,setDataArray]=useState([])
-    const [login,setLogin]=useState(false)
     const [feild,setFeild]=useState(false)
     let isvalide=true
+    const {setLogin} = useContext(LoginContext)
 
+    //message
+    const params=new URLSearchParams(window.location.search)
+    const paramsValue= params.get('message')
+    //redirct to buy
+    const pathnam=params.get("redirectTo")
     const navigate = useNavigate()
 
     const [error,setError]=useState({
@@ -31,14 +37,10 @@ export default function Login() {
           [name]: value,
         });
       }
-      console.log(formData)
+    //   console.log(formData)
     const handleClick=()=>{
-        setDisplay(false)
+        setDisplay(!display)
     }
-    const handleClicks=()=>{
-        setDisplay(true)
-    }
-
     const validationEmail=()=>{
         if(!formData.email.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) || formData.email.trim()===''){
             setError(p=>{return{...p,email:true}})
@@ -67,9 +69,14 @@ export default function Login() {
         for(let i=0;i<dataArray.length;i++){
             let data= dataArray[i]
             if(data.usernam === usernam && data.psw === pws){
+                setLogin(true)
+                if(paramsValue){
+                    return navigate(pathnam)
+                }
                 navigate('/');
             }else{
                 setFeild(true)
+                setLogin(false)
             }
         }
     }
@@ -88,10 +95,11 @@ export default function Login() {
             setDisplay(true)
         }
     }
-    
-    // console.log(valus)
+    console.log(paramsValue);
+    console.log(dataArray)
     return (
         <div className="form-login">
+                <p className="red-redrict">{paramsValue && paramsValue }</p>
             <main >
             <form data-testid='form' >
                 {display ?
@@ -122,8 +130,8 @@ export default function Login() {
                     <label >Password</label>
                     <input data-testid='motDePass' type="password" value={formData.password} name="password" onChange={handleInputChange}/>
                     {error.password && <p className="red">password not valide</p>}
-                    <input data-testid='entrer' type="submit"value="Sign Up" className="btn-submit" onClick={handleSubmit}/>
-                    <span onClick={handleClicks}>I have already acount</span>
+                    <input type="submit"value="Sign Up" className="btn-submit" onClick={handleSubmit}/>
+                    <span onClick={handleClick}>I have already acount</span>
                 </>
             }
             </form>

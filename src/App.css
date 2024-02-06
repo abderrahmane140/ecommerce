@@ -175,8 +175,9 @@ a{
   color: black;
   background-color: #FFD814;
 }
-.trash{
-  margin-top: 50px;
+.trash-q{
+  padding: 60px;
+  cursor: pointer;
 }
 /* add to cart end here */
 /* Products details start here */
@@ -209,3 +210,30 @@ a{
 }
 /* page not found end here */
 
+/* buy start here */
+.order-Summary{
+  padding: 15px 10px;
+  width: 240px;
+  border-radius: 7px;
+  border: 0.5px solid gray;
+  margin-top: 100px;
+  text-align: center;
+}
+.order-Summary .total-red{
+color: red;
+font-weight: 800;
+font-size: large;
+}
+.order-Summary .btn-Shipping{
+  background-color: #FFD814;
+}
+
+/* buy end here */
+.red-redrict{
+  color: red;
+  text-align: center;
+  font-weight: 800;
+  font-size: larger;
+  margin-bottom: 2px;
+  display: block;
+}

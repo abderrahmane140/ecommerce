@@ -6,27 +6,7 @@ function Product() {
     const [value,setValue]=useState('')
     const [catgFilter,setCatgFilter]=useState('')
     let result={}
-    console.log(catgFilter)
-    // useEffect(()=>{
-    //     fetch("http://localhost:8000/products").then(item=>item.json()).then(dat=>setData(dat))
-    // },[])
-    
 
-
-    //     fetchData();
-    // }, []);
-
-
-    // if(catgFilter){
-    //     result =data && data.filter(item=>
-    //         item.type === catgFilter)
-    // }else if(value){
-    //     let resultl = result ? result.filter(item=>
-    //         item.title.toUpperCase().includes(value.toUpperCase())):data.filter(item=>
-    //             item.title.toUpperCase().includes(value.toUpperCase()))
-    // }else{
-    //     result= data
-    // }
     if(catgFilter){
         result =data && data.filter(item=>
             item.type === catgFilter)
@@ -44,24 +24,6 @@ function Product() {
     }else{
         result= data
     }
-    ///////////////////////////////
-    // if(value){
-    //     result = data && data.filter(item=>
-    //         item.title.toUpperCase().includes(value.toUpperCase()))
-    // }else if(catgFilter){
-    //     result =data && data.filter(item=>
-    //         item.type === catgFilter)
-    // }else{
-    //     result= data
-    // }
-    /////////////////////
-    // let result = value && catgFilter ? data && data.filter(item=>
-    //     item.title.toUpperCase().includes(value.toUpperCase()) || item.type === catgFilter
-    // ):data
-
-
-    // item.title.toUpperCase().includes(value.toUpperCase())
-    // || item.type.toUpperCase() === catgFilter
 
     const HandleClick=()=>{
         document.getElementById('text').value=''
@@ -74,26 +36,26 @@ function Product() {
                     <option value="" >All</option>
                     <option value="shirt" >Shirt</option>
                     <option value="book" >Book</option>
-                    <option value="Electronic">Electronic</option>
+                    <option value="sticker">sticker</option>
                 </select>
-          <form data-testid="form" onSubmit={e=>e.preventDefault()}>
+            <form onSubmit={e=>e.preventDefault()}>
             <div className="input-container">
-                <input data-testid="text"  type="text" id='text' onChange={e=>setValue(e.target.value)} className='search-input' placeholder={`search for ${catgFilter?catgFilter:"anything"}`} />
+                <input type="text" id='text' onChange={e=>setValue(e.target.value)} className='search-input' placeholder="Search for anything..." />
                 {value && <i className="fa-solid fa-x" onClick={HandleClick} ></i>}
             </div>
-          </form>
+            </form>
         </div>
         <div data-testid="div1" className="row">
         {result.length>0 ? result.map(item=>(
-            <div  className="col-lg-4 mb-4" key={item.id}>
-                <Link data-testid="link" to={`/productDetails/${item.id}`}>
+            <div className="col-lg-4 col-md-6 mb-4" key={item.id}>
+                <Link to={`/productDetails/${item.id}`}>
                 <div className={`card`} style={{width: "18rem"}}  >
                     <div className="card-img">
                     <img data-testid="img" src={item.imgUrl} className={`crd`} height="170px" width="180px"/>
                     </div>
                 <div data-testid="div3" className="card-body">
                     <h5 className="card-title">{item.title.slice(0,60)+'...'}</h5>
-                    <p>{item.price}</p>
+                    <p>{`${item.price}$`}</p>
                 </div>
             </div>
                 </Link>
