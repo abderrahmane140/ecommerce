@@ -93,36 +93,36 @@ export default function Login() {
     return (
         <div className="form-login">
             <main >
-            <form  >
+            <form data-testid='form' >
                 {display ?
                 <>
                 {feild ? <p className="red">account not found</p>:null}
                 <h4>Login</h4>
                 <label htmlFor="">Email or Usernam</label>
-                <input type="text" value={usernam} onChange={e=>{
+                <input data-testid='nom' type="text" value={usernam} onChange={e=>{
                     setUsernam(e.target.value)
                 }}/>
                 <label >Password</label>
-                <input type="password" value={pws} onChange={e=>{
+                <input data-testid='password' type="password" value={pws} onChange={e=>{
                     setPws(e.target.value)
                 }}/>
-                <input type="submit" onClick={handleLoginSubmit} value="Login" className="btn-submit" />
+                <input data-testid='submit' type="submit" onClick={handleLoginSubmit} value="Login" className="btn-submit" />
                 <span  onClick={handleClick}>I dont have account ?</span>
                 </>
                 :
                 <>
                 <h4>sign up</h4>
                     <label >Name</label>
-                    <input type="text" value={formData.nam} name="nam" onChange={handleInputChange}/>
+                    <input data-testid='name' type="text" value={formData.nam} name="nam" onChange={handleInputChange}/>
                     {error.nam && <p className='red'>name not valide</p>}
                     <label >Email</label>
-                    <input className={style ?'pswError':null}
+                    <input data-testid='mail' className={style ?'pswError':null}
                     type="text" value={formData.email} name="email" onChange={handleInputChange}/>
                     {error.email && <p className='red'>email not valide</p>}
                     <label >Password</label>
-                    <input type="password" value={formData.password} name="password" onChange={handleInputChange}/>
+                    <input data-testid='motDePass' type="password" value={formData.password} name="password" onChange={handleInputChange}/>
                     {error.password && <p className="red">password not valide</p>}
-                    <input type="submit"value="Sign Up" className="btn-submit" onClick={handleSubmit}/>
+                    <input data-testid='entrer' type="submit"value="Sign Up" className="btn-submit" onClick={handleSubmit}/>
                     <span onClick={handleClicks}>I have already acount</span>
                 </>
             }

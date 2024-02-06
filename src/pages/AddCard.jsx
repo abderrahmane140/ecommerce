@@ -9,12 +9,12 @@ export default function AddCard() {
         handledelete(id)
     };
     return (
-        <div className="container">
+        <div data-testid="div1" className="container">
             {cart.map((item)=>(
-                <div className="card mb-3" key={item.id} style={{height: "160px"}}>
+                <div  className="card mb-3" key={item.id} style={{height: "160px"}}>
                 <div className=" ha row g-0">
                     <div className="col-md-3 mt-3">
-                    <img src={item.imgUrl} style={{width: "120px"}} className="img-fluid rounded-start" alt="..."/>
+                    <img data-testid="img"  src={item.imgUrl} style={{width: "120px"}} className="img-fluid rounded-start" alt="..."/>
                     </div>
                     <div className="col-md-3 mt-3">
                     <div className="card-body">
@@ -26,7 +26,7 @@ export default function AddCard() {
                         <p className="number">{item.counte}</p>
                     </div>
                     <div className="col-md-3 trash">
-                    <span onClick={()=>handleDelete(item.id)}><i className="fa-solid fa-trash"></i></span>
+                    <span data-testid="span" onClick={()=>handleDelete(item.id)}><i className="fa-solid fa-trash"></i></span>
                     </div>
                         
                 </div>

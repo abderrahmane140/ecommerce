@@ -111,7 +111,7 @@ export default function Contact(){
 
     return <>
     {isFormSent? 
-        <div className="jumbotron jumbotron-fluid">
+        <div data-testid='div1' className="jumbotron jumbotron-fluid">
             <div className="container">
             <h1 className="display-3">Message Sent Succefully</h1>
             <p className="lead">Thank you for your message</p>
@@ -123,7 +123,7 @@ export default function Contact(){
             </div>
         </div>
     :
-    <div className="container Contact">
+    <div data-testid='div2' className="container Contact">
       <span className="big-circle"></span>
       <img src="img/shape.png" className="square" alt="" />
       <div className="form">
@@ -168,28 +168,28 @@ export default function Contact(){
           </div>
         </div>
 
-        <div className="contact-form">
+        <div data-testid='div3' className="contact-form">
           <span className="circle one"></span>
           <span className="circle two"></span>
 
-        <form onSubmit={submitForm} onChange={handleChange} >
+        <form data-testid='form' onSubmit={submitForm} onChange={handleChange} >
             <h3 className="title">Contact us</h3>
             <div className="input-container">   
-              <input placeholder="username" type="text" id="name" className="input" ref={nameField} />
+              <input data-testid='nom' placeholder="username" type="text" id="name" className="input" ref={nameField} />
               {displayError('name')}
             </div>
             <div className="input-container">
-              <input placeholder="email" type="email" id="email" className="input" ref={emailField} />
+              <input data-testid='email' placeholder="email" type="email" id="email" className="input" ref={emailField} />
               {displayError('email')}
             </div>
             <div className="input-container textarea">
-              <textarea placeholder="message" id="message" className="input" ref={messageField}></textarea>
+              <textarea data-testid='text' placeholder="message" id="message" className="input" ref={messageField}></textarea>
               {displayError('message')}
             </div>
 
             <div className="form-check mb-4">
             <div className="d-flex">
-                <input className="form-check-input me-2" type="checkbox" id="AcceptAllCondition"
+                <input data-testid='checked' className="form-check-input me-2" type="checkbox" id="AcceptAllCondition"
                  ref={acceptConditionsField} />
                 <label className="form-check-label" htmlFor="acceptAllConditions">
                     Accept all conditions
@@ -197,7 +197,7 @@ export default function Contact(){
             </div>
             {displayError('AcceptAllCondition')}
             </div>
-            <button disabled={!isFormsValid} type="submit" className="btn w-100 mb-4">Submit</button>
+            <button data-testid='submit' disabled={!isFormsValid} type="submit" className="btn w-100 mb-4">Submit</button>
           </form>
         </div>
       </div>

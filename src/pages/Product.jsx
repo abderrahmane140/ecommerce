@@ -68,30 +68,30 @@ function Product() {
         setValue('')
     }
     return (
-        <div className="container cont-filter">
+        <div data-testid="div0" className="container cont-filter">
         <div className="search-nav col-lg-12">
-                <select name="" id="" onClick={e=>setCatgFilter(e.target.value)}>
+                <select data-testid="select" name="" id="" onClick={e=>setCatgFilter(e.target.value)}>
                     <option value="" >All</option>
                     <option value="shirt" >Shirt</option>
                     <option value="book" >Book</option>
                     <option value="Electronic">Electronic</option>
                 </select>
-          <form onSubmit={e=>e.preventDefault()}>
+          <form data-testid="form" onSubmit={e=>e.preventDefault()}>
             <div className="input-container">
-                <input type="text" id='text' onChange={e=>setValue(e.target.value)} className='search-input' placeholder={`search for ${catgFilter?catgFilter:"anything"}`} />
+                <input data-testid="text"  type="text" id='text' onChange={e=>setValue(e.target.value)} className='search-input' placeholder={`search for ${catgFilter?catgFilter:"anything"}`} />
                 {value && <i className="fa-solid fa-x" onClick={HandleClick} ></i>}
             </div>
           </form>
         </div>
-        <div className="row">
+        <div data-testid="div1" className="row">
         {result.length>0 ? result.map(item=>(
-            <div className="col-lg-4 mb-4" key={item.id}>
-                <Link to={`/productDetails/${item.id}`}>
+            <div  className="col-lg-4 mb-4" key={item.id}>
+                <Link data-testid="link" to={`/productDetails/${item.id}`}>
                 <div className={`card`} style={{width: "18rem"}}  >
                     <div className="card-img">
-                    <img src={item.imgUrl} className={`crd`} height="170px" width="180px"/>
+                    <img data-testid="img" src={item.imgUrl} className={`crd`} height="170px" width="180px"/>
                     </div>
-                <div className="card-body">
+                <div data-testid="div3" className="card-body">
                     <h5 className="card-title">{item.title.slice(0,60)+'...'}</h5>
                     <p>{item.price}</p>
                 </div>
